@@ -5,3 +5,11 @@ html {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
+.circle-clip {
+  clip-path: circle(300vh at 50% -200vh);
+}
+
+.title-font {
+  font-family: 'Poiret One';
+}
