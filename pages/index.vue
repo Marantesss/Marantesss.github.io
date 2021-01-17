@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <Header />
     <div class="container mx-auto my-6">
       <ExpertiseSection />
@@ -34,15 +33,15 @@
 
 <script>
 import Header from '~/components/home/Header'
-import Navbar from '~/components/common/Navbar'
 import ExpertiseSection from '~/components/home/ExpertiseSection'
 
 export default {
   name: 'Index',
 
+  layout: 'default',
+
   components: {
     Header,
-    Navbar,
     ExpertiseSection,
   },
 
