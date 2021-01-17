@@ -2,7 +2,10 @@
   <div>
     <Navbar />
     <Header />
-    <div class="container">
+    <div class="container mx-auto my-6">
+      <ExpertiseSection />
+    </div>
+    <div class="random-container">
       <div>
         <Logo />
         <h1 class="title">marantesss-website</h1>
@@ -32,6 +35,7 @@
 <script>
 import Header from '~/components/home/Header'
 import Navbar from '~/components/common/Navbar'
+import ExpertiseSection from '~/components/home/ExpertiseSection'
 
 export default {
   name: 'Index',
@@ -39,6 +43,7 @@ export default {
   components: {
     Header,
     Navbar,
+    ExpertiseSection,
   },
 
   data: () => ({}),
@@ -51,7 +56,7 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
+.random-container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
