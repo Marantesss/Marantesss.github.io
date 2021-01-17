@@ -10,6 +10,10 @@ export default {
   name: 'Blog',
 
   layout: 'default',
+
+  head: {
+    title: 'Marantesss 👋 - Blog',
+  },
 }
 </script>
 

@@ -46,6 +46,10 @@ export default {
   },
 
   data: () => ({}),
+
+  head: {
+    title: 'Marantesss 👋 - Home',
+  },
 }
 </script>
 
