@@ -6,6 +6,13 @@ html {
   Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+
+@media only screen and (max-height: 500px) {
+  .circle-clip {
+    clip-path: none !important;
+  }
+}
+
 .circle-clip {
   clip-path: circle(300vh at 50% -200vh);
 }
