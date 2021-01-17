@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar />
     <Header />
     <div class="container">
       <div>
@@ -29,13 +30,15 @@
 </template>
 
 <script>
-import Header from '~/components/Home/Header'
+import Header from '~/components/home/Header'
+import Navbar from '~/components/common/Navbar'
 
 export default {
   name: 'Index',
 
   components: {
     Header,
+    Navbar,
   },
 
   data: () => ({}),

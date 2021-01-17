@@ -5,8 +5,11 @@
         v-for="item in navbarItems"
         :key="item.name"
         class="navbar-items text-2xl p-2 w-32 text-center"
-        v-text="item.name"
-      ></li>
+      >
+        <NuxtLink :to="item.route">
+          {{ item.name }}
+        </NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>
