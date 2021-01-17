@@ -1,16 +1,7 @@
 <template>
   <div>
     <!-- Navbar -->
-    <nav class="fixed w-full top-0 bg-transparent z-10">
-      <ul class="flex justify-end navbar-items p-2">
-        <li
-          v-for="item in navbarItems"
-          :key="item.name"
-          class="navbar-items text-2xl p-2 w-32 text-center"
-          v-text="item.name"
-        ></li>
-      </ul>
-    </nav>
+    <Navbar />
     <!-- header -->
     <div
       class="relative h-screen grid grid-cols-5 circle-clip header-min-height"
@@ -50,8 +41,14 @@
 </template>
 
 <script>
+import Navbar from '@/components/common/Navbar'
+
 export default {
   name: 'Header',
+
+  components: {
+    Navbar,
+  },
 
   data: () => ({
     navbarItems: [
@@ -69,10 +66,6 @@ export default {
 </script>
 
 <style scoped>
-.navbar-items {
-  font-family: 'Poiret One';
-}
-
 .header-min-height {
   min-height: 500px;
 }
