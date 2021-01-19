@@ -3,7 +3,7 @@
     <XIcon
       v-if="isMenuOpen"
       class="menu-button"
-      :class="{ 'detached-menu-button': isDetached }"
+      :class="{ 'detached-menu-button': isDetached && !isMenuOpen }"
       size="4x"
       @click="toggleMenu"
     />
@@ -91,7 +91,7 @@ export default {
 }
 
 .detached-menu-button {
-  @apply bg-gray-200 shadow-lg mt-4;
+  @apply bg-gray-200 shadow-lg;
 }
 
 .menu {
