@@ -15,9 +15,13 @@
           class="h-full flex items-center justify-center md:justify-start w-full md:w-1/2"
         >
           <div class="hero-card md:p-0 p-8">
-            <h1 class="text-left title-font hero-title">Gonçalo</h1>
-            <h1 class="text-right title-font hero-title">Marantes</h1>
-            <h2 class="text-3xl title-font">
+            <h1 class="text-gray-700 text-left title-font hero-title">
+              Gonçalo
+            </h1>
+            <h1 class="text-gray-700 text-right title-font hero-title">
+              Marantes
+            </h1>
+            <h2 class="text-3xl title-font text-gray-700">
               I like anything software related. I also do pretty stuff like
               rainbows and unicorns.
             </h2>
