@@ -24,7 +24,8 @@
       </div>
       <button
         type="button"
-        class="uppercase inline-block py-2 px-4 text-white rounded-full bg-gradient-to-r from-green-400 to-blue-500"
+        class="uppercase inline-block py-2 px-4 text-white rounded-full bg-gradient-to-r"
+        :class="gradientClasses"
       >
         View Project
       </button>
@@ -53,9 +54,9 @@ export default {
       type: String,
       default: '',
     },
-    color: {
-      type: String,
-      default: '',
+    gradientClasses: {
+      type: Array,
+      default: () => ['from-green-400', 'to-blue-500'],
     },
   },
 }

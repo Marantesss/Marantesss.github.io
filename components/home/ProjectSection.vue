@@ -8,7 +8,7 @@
           :image-position="card.imagePosition"
           :title="card.title"
           :description="card.description"
-          :color="card.color"
+          :gradient-classes="card.gradientClasses"
         />
       </div>
     </div>
@@ -35,28 +35,28 @@ export default {
         title: 'Project: Orwell',
         description:
           'React, Bulma, Figma, Affinity Design, Node, Express, Knex, PostgreSQL',
-        color: '#CCD4BF',
+        gradientClasses: ['from-blue-900', 'to-red-800'],
       },
       {
         imageName: 'test',
         imagePosition: 'left',
         title: 'Calculadora Fiscal',
         description: 'Nuxt, Bulma, Figma',
-        color: '#E7CBA9',
+        gradientClasses: ['from-yellow-400', 'to-orange-500'],
       },
       {
         imageName: 'test',
         imagePosition: 'right',
         title: 'IEEE UP SB Website',
         description: 'Vue, Vuetify, Django, PostgreSQL',
-        color: '#CCD4BF',
+        gradientClasses: ['from-green-400', 'to-blue-500'],
       },
       {
         imageName: 'test',
         imagePosition: 'left',
         title: 'Scope: 360 Dashboard',
         description: 'Vue, Vuetify, Node, Knex, PostgreSQL',
-        color: '#E7CBA9',
+        gradientClasses: ['from-purple-400', 'to-red-500'],
       },
     ],
   }),
