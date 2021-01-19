@@ -11,6 +11,11 @@ module.exports = {
         'light-blue': '#DFF2F6',
         'light-pink': '#EEB4B3',
       },
+      height: {
+        72: '18rem',
+        84: '21rem',
+        96: '24rem',
+      },
     },
   },
   variants: {},

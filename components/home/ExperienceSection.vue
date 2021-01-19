@@ -1,12 +1,8 @@
 <template>
   <section>
     <SectionTitle title="Where I've Been" />
-    <div class="flex flex-wrap mt-12">
-      <div
-        v-for="card in cards"
-        :key="card.title"
-        class="w-full md:w-1/2 lg:w-1/3 flex justify-center"
-      >
+    <div class="flex flex-wrap mt-12 justify-center">
+      <div v-for="card in cards" :key="card.title" class="p-2">
         <ExperienceCard
           :image-name="card.imageName"
           :title="card.title"
@@ -35,13 +31,11 @@ export default {
         imageName: 'graduation',
         title: 'FEUP',
         description: 'MIEIC',
-        color: '#CCD4BF',
       },
       {
         imageName: 'microchip',
         title: 'SPeCS',
         description: 'Intern',
-        color: '#E7CBA9',
       },
     ],
   }),

@@ -1,12 +1,19 @@
 <template>
   <div>
     <Header />
-    <div class="container mx-auto my-6">
-      <ExpertiseSection />
+    <!-- Content -->
+    <div class="container mx-auto">
+      <div class="min-h-screen flex justify-center items-center">
+        <ExpertiseSection />
+      </div>
+      <div class="mt-6 flex justify-center items-center">
+        <ExperienceSection />
+      </div>
+      <div class="min-h-screen flex justify-center items-center">
+        <ProjectSection />
+      </div>
     </div>
-    <div class="container mx-auto my-6">
-      <ExperienceSection />
-    </div>
+    <!-- TODO remove this -->
     <div class="random-container">
       <div>
         <Logo />
@@ -38,6 +45,7 @@
 import Header from '~/components/home/Header'
 import ExpertiseSection from '~/components/home/ExpertiseSection'
 import ExperienceSection from '~/components/home/ExperienceSection'
+import ProjectSection from '~/components/home/ProjectSection'
 
 export default {
   name: 'Index',
@@ -48,6 +56,7 @@ export default {
     Header,
     ExpertiseSection,
     ExperienceSection,
+    ProjectSection,
   },
 
   data: () => ({}),
