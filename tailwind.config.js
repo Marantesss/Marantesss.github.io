@@ -1,16 +1,29 @@
-module.exports = ({ dev, rootDir, srcDir }) => ({
-  theme: {},
+module.exports = {
+  theme: {
+    fontFamily: {
+      sans: ['Montserrat', 'Segoe UI', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+      title: ['Poiret One', 'Montserrat', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        'dark-blue': '#073B4C',
+        'light-blue': '#DFF2F6',
+        'light-pink': '#EEB4B3',
+      },
+    },
+  },
   variants: {},
   plugins: [],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-    enabled: !dev,
     content: [
-      `${srcDir}/components/**/*.{vue,js}`,
-      `${srcDir}/layouts/**/*.vue`,
-      `${srcDir}/pages/**/*.vue`,
-      `${srcDir}/plugins/**/*.{js,ts}`,
-      `${rootDir}/nuxt.config.{js,ts}`,
+      'components/**/*.{vue,js}',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.{js,ts}',
+      'nuxt.config.{js,ts}',
+      'content/**/*.md',
     ],
   },
-})
+}
