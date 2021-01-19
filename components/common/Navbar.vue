@@ -22,7 +22,7 @@
         <li
           v-for="item in navbarItems"
           :key="item.name"
-          class="font-title text-4xl py-4"
+          class="menu-item"
           @click="toggleMenu"
         >
           <NuxtLink :to="item.route">
@@ -95,7 +95,7 @@ export default {
 }
 
 .menu {
-  @apply fixed z-10 top-0 left-0 h-screen w-screen bg-white flex items-center justify-center;
+  @apply fixed z-10 top-0 left-0 h-screen w-screen bg-light-blue flex items-center justify-center;
 }
 
 .closed-menu {
@@ -104,5 +104,13 @@ export default {
 
 .opened-menu {
   @apply visible;
+}
+
+.menu-item {
+  @apply font-title text-4xl py-4 transition duration-200 ease-in-out;
+}
+
+.menu-item:hover {
+  @apply underline;
 }
 </style>
