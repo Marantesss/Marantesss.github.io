@@ -23,6 +23,8 @@ export default {
 <style>
 body {
   position: relative;
+  /* always show scrollbar */
+  overflow-y: scroll;
 }
 
 body::after {
