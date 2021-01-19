@@ -6,8 +6,11 @@
     >
       <img :src="require(`~/assets/img/icons/${imageName}.png`)" />
     </div>
-    <h3 class="text-lg font-bold uppercase py-4" v-text="title"></h3>
-    <p v-text="description"></p>
+    <h3
+      class="text-lg text-gray-900 leading-tight uppercase py-4"
+      v-text="title"
+    ></h3>
+    <p class="text-base text-gray-600 leading-normal" v-text="description"></p>
   </div>
 </template>
 

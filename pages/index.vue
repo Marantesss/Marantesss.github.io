@@ -4,6 +4,9 @@
     <div class="container mx-auto my-6">
       <ExpertiseSection />
     </div>
+    <div class="container mx-auto my-6">
+      <ExperienceSection />
+    </div>
     <div class="random-container">
       <div>
         <Logo />
@@ -34,6 +37,7 @@
 <script>
 import Header from '~/components/home/Header'
 import ExpertiseSection from '~/components/home/ExpertiseSection'
+import ExperienceSection from '~/components/home/ExperienceSection'
 
 export default {
   name: 'Index',
@@ -43,6 +47,7 @@ export default {
   components: {
     Header,
     ExpertiseSection,
+    ExperienceSection,
   },
 
   data: () => ({}),
