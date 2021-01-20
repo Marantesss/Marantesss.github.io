@@ -25,7 +25,7 @@
               I like anything software related. I also do pretty stuff like
               rainbows and unicorns.
             </h2>
-            <Button :color-class="'bg-pink-300'">Get in touch with me</Button>
+            <Button :color-class="'bg-pink-400'">Get in touch with me</Button>
           </div>
         </div>
       </div>
