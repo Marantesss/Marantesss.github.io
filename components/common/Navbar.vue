@@ -17,13 +17,14 @@
     <div class="menu" :class="{ 'opened-menu': isMenuOpen }">
       <ul class="text-center m-auto p-2">
         <li
-          v-for="item in navbarItems"
-          :key="item.name"
+          v-for="route in routes"
+          :key="route.name"
           class="menu-item"
+          :class="$nuxt.$route.path === route.path ? 'underline' : ''"
           @click="toggleMenu"
         >
-          <NuxtLink :to="item.route">
-            {{ item.name }}
+          <NuxtLink :to="route.path">
+            {{ route.name }}
           </NuxtLink>
         </li>
       </ul>
@@ -45,14 +46,14 @@ export default {
   data: () => ({
     isMenuOpen: false,
     scrollPosition: null,
-    navbarItems: [
+    routes: [
       {
         name: 'Home',
-        route: '/',
+        path: '/',
       },
       {
         name: 'Blog',
-        route: '/blog',
+        path: '/blog',
       },
     ],
   }),
@@ -106,7 +107,7 @@ export default {
 }
 
 .menu-item {
-  @apply font-title text-4xl py-4 transition-all duration-200 ease-in-out;
+  @apply font-title text-4xl py-4;
 }
 
 .menu-item:hover {
