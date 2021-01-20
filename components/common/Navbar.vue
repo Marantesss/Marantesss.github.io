@@ -14,10 +14,7 @@
       size="4x"
       @click="toggleMenu"
     />
-    <div
-      class="menu"
-      :class="{ 'opened-menu': isMenuOpen, 'closed-menu': !isMenuOpen }"
-    >
+    <div class="menu" :class="{ 'opened-menu': isMenuOpen }">
       <ul class="text-center m-auto p-2">
         <li
           v-for="item in navbarItems"
@@ -83,7 +80,7 @@ export default {
 
 <style scoped>
 .menu-button {
-  @apply right-0 bg-transparent top-0 m-2 fixed z-20 rounded-lg cursor-pointer;
+  @apply right-0 top-0 bg-transparent m-2 fixed z-20 rounded-lg cursor-pointer;
 }
 
 .menu-button:hover {
@@ -91,23 +88,25 @@ export default {
 }
 
 .detached-menu-button {
-  @apply bg-gray-200 shadow-lg;
+  @apply bg-light-blue shadow-lg;
 }
 
 .menu {
   @apply fixed z-10 top-0 left-0 h-screen w-screen bg-light-blue flex items-center justify-center;
-}
-
-.closed-menu {
-  @apply hidden;
+  /* Bubble animation */
+  clip-path: circle(0px at 100% 0%);
+  -webkit-clip-path: circle(0px at 100% 0%);
+  @apply transition-all ease-out duration-1000;
 }
 
 .opened-menu {
-  @apply visible;
+  /* very large numbers */
+  clip-path: circle(200% at 100% 0%);
+  -webkit-clip-path: circle(200% at 100% 0%);
 }
 
 .menu-item {
-  @apply font-title text-4xl py-4 transition duration-200 ease-in-out;
+  @apply font-title text-4xl py-4 transition-all duration-200 ease-in-out;
 }
 
 .menu-item:hover {
