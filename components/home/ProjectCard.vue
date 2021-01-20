@@ -22,20 +22,20 @@
           v-text="description"
         ></p>
       </div>
-      <button
-        type="button"
-        class="uppercase inline-block py-2 px-4 text-white rounded-full bg-gradient-to-r"
-        :class="gradientClasses"
-      >
-        View Project
-      </button>
+      <Button :color-class="gradientClasses">View Project</Button>
     </div>
   </div>
 </template>
 
 <script>
+import Button from '~/components/common/Button'
+
 export default {
   name: 'ProjectCard',
+
+  components: {
+    Button,
+  },
 
   props: {
     imageName: {
@@ -55,8 +55,8 @@ export default {
       default: '',
     },
     gradientClasses: {
-      type: Array,
-      default: () => ['from-green-400', 'to-blue-500'],
+      type: String,
+      default: 'from-green-400 to-blue-500',
     },
   },
 }

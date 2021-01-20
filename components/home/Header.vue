@@ -25,11 +25,7 @@
               I like anything software related. I also do pretty stuff like
               rainbows and unicorns.
             </h2>
-            <button
-              class="mt-2 uppercase bg-pink-300 hover:bg-pink-400 text-white py-2 px-4 rounded-full"
-            >
-              Get in touch with me
-            </button>
+            <Button :color-class="'bg-pink-300'">Get in touch with me</Button>
           </div>
         </div>
       </div>
@@ -38,8 +34,14 @@
 </template>
 
 <script>
+import Button from '~/components/common/Button'
+
 export default {
   name: 'Header',
+
+  components: {
+    Button,
+  },
 
   data: () => ({
     navbarItems: [
