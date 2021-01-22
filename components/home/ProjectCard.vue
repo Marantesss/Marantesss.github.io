@@ -13,7 +13,7 @@
       />
     </div>
     <div
-      class="col-span-8 md:col-span-6 ml-6 p-12 lg:p-6 flex flex-col justify-between"
+      class="col-span-8 md:col-span-6 ml-6 p-6 flex flex-col justify-between"
     >
       <div>
         <h4 class="text-4xl text-gray-900 leading-tight" v-text="title"></h4>
@@ -22,7 +22,14 @@
           v-text="description"
         ></p>
       </div>
-      <Button :color-class="gradientClasses">View Project</Button>
+      <a v-if="url" target="_blank" :href="url">
+        <Button class="w-full" :color-class="gradientClasses"
+          >View Project</Button
+        >
+      </a>
+      <Button v-else class="w-full" :color-class="gradientClasses"
+        >View Project</Button
+      >
     </div>
   </div>
 </template>
@@ -54,9 +61,13 @@ export default {
       type: String,
       default: '',
     },
+    url: {
+      type: String,
+      default: undefined,
+    },
     gradientClasses: {
       type: String,
-      default: 'from-green-400 to-blue-500',
+      default: 'bg-gradient-to-r from-green-400 to-blue-500',
     },
   },
 }

@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .my-button {
   /* Normal properties */
-  @apply uppercase inline-block py-2 px-4 text-white rounded-full;
+  @apply uppercase inline-block py-2 px-4 text-white rounded-full shadow-lg;
   /* Transiution properties */
   @apply transition-all ease-out duration-200;
 }

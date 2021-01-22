@@ -11,7 +11,7 @@
       <div class="h-full flex">
         <!-- photo -->
         <div ref="heroPhoto" class="md:w-1/2 md:flex hidden justify-center">
-          <img src="~assets/img/test.png" />
+          <img class="object-cover" src="~assets/img/test.png" />
         </div>
         <!-- title -->
         <div
@@ -24,11 +24,17 @@
             <h1 class="text-gray-700 text-right font-title hero-title">
               Marantes
             </h1>
-            <h2 class="text-3xl font-title text-gray-700">
+            <h2 class="text-3xl font-title text-gray-700 pb-4">
               I like anything software related. I also do pretty stuff like
               rainbows and unicorns.
             </h2>
-            <Button :color-class="'bg-pink-400'">Get in touch with me</Button>
+            <!--
+              TODO Figure out what to do with this
+            <Button
+              :color-class="'bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400'"
+              >Get in touch with me</Button
+            >
+            -->
           </div>
         </div>
       </div>
@@ -37,14 +43,8 @@
 </template>
 
 <script>
-import Button from '~/components/common/Button'
-
 export default {
   name: 'Header',
-
-  components: {
-    Button,
-  },
 
   data: () => ({
     navbarItems: [
@@ -68,21 +68,22 @@ export default {
     const timeline = this.$gsap.timeline()
 
     timeline
-      // curve bottom header
+      // curve header
       .fromTo(
         headerContainer,
         { clipPath: 'none' },
         {
           clipPath: 'circle(300vh at 50% -200vh)',
-          duration: 1,
-          ease: 'power2.out',
+          duration: 2,
+          ease: 'power2.inOut',
         }
       )
       // slide from right to left
       .fromTo(
         heroCard,
         { opacity: 0, x: '200%' },
-        { opacity: 1, x: '0%', duration: 1, ease: 'power2.out' }
+        { opacity: 1, x: '0%', duration: 1, ease: 'power2.out' },
+        '-=1'
       )
       // slide from left to right
       .fromTo(
