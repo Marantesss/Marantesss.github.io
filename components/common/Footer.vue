@@ -4,7 +4,7 @@
     <div class="w-64 py-2 mx-auto flex justify-around">
       <span
         v-for="social in socials"
-        :key="social.icon"
+        :key="social.link"
         class="transition duration-200 ease-in-out hover:bg-gray-600 p-2 rounded-full cursor-pointer"
       >
         <a :href="social.link">
