@@ -2,23 +2,27 @@
   <footer class="h-40 w-full bg-dark-blue text-white py-4 absolute bottom-0">
     <!-- SOCIAL ICONS -->
     <div class="w-64 py-2 mx-auto flex justify-around">
-      <span
+      <a
         v-for="social in socials"
         :key="social.link"
-        class="transition duration-200 ease-in-out hover:bg-gray-600 p-2 rounded-full cursor-pointer"
+        class="footer-button"
+        :href="social.link"
+        target="_blank"
       >
-        <a :href="social.link">
-          <component :is="social.icon" />
-        </a>
-      </span>
+        <component :is="social.icon" />
+      </a>
     </div>
     <!-- Copyright and Props -->
     <div class="py-2 mx-auto text-center">
       <p>
         All icons provided by
-        <a class="underline" href="https://feathericons.com/">Feather</a>
+        <a class="underline" target="_blank" href="https://feathericons.com/"
+          >Feather</a
+        >
         and
-        <a class="underline" href="https://www.flaticon.com/">Flaticon</a>
+        <a class="underline" target="_blank" href="https://www.flaticon.com/"
+          >Flaticon</a
+        >
       </p>
       <p>
         {{ getCurrentYear }} - <span class="font-bold">Gonçalo Marantes</span>
@@ -80,4 +84,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.footer-button {
+  @apply transition duration-200 ease-in-out p-2 rounded-full;
+}
+
+.footer-button:hover {
+  @apply bg-gray-600;
+}
+</style>
