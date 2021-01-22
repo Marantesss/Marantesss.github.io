@@ -1,5 +1,5 @@
 <template>
-  <span class="my-label" :class="backgoundClass">
+  <span class="my-label" :class="backgroundClass">
     <slot></slot>
   </span>
 </template>
@@ -9,9 +9,9 @@ export default {
   name: 'Label',
 
   props: {
-    backgoundClass: {
+    backgroundClass: {
       type: String,
-      default: 'bg-gray-300',
+      default: 'bg-gray-500',
     },
   },
 }
@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .my-label {
   /* style */
-  @apply rounded-full px-2 h-6 text-sm text-gray-600;
+  @apply rounded-full px-2 h-6 text-sm text-white;
   /* position */
   @apply flex justify-center items-center;
 }

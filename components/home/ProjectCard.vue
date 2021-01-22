@@ -72,9 +72,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.card-button {
-  width: fit-content;
-}
-</style>

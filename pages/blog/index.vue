@@ -1,8 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <h1>HELLO</h1>
-    <p>All blog posts</p>
-    <section class="grid grid-rows-1 gap-4">
+    <section class="grid grid-cols-1 xl:grid-cols-2 gap-4">
       <div v-for="post in posts" :key="post.title">
         <PostCard
           :image="post.image"
@@ -27,7 +25,7 @@ export default {
     PostCard,
   },
 
-  layout: 'default',
+  layout: 'blog',
 
   async asyncData({ $content }) {
     const posts = await $content('articles').fetch()
