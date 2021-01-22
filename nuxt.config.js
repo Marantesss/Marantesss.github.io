@@ -31,6 +31,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // gsap
+    'nuxt-gsap-module',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
