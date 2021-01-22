@@ -1,5 +1,5 @@
 <template>
-  <footer class="h-40 w-full bg-dark-blue text-white py-4 absolute bottom-0">
+  <footer class="h-40 w-full bg-dark-blue text-white py-4">
     <!-- SOCIAL ICONS -->
     <div class="w-64 py-2 mx-auto flex justify-around">
       <a

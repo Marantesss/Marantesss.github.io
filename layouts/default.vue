@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <Navbar />
-    <Nuxt />
+    <Nuxt class="flex-grow" />
     <Footer />
   </div>
 </template>
@@ -19,24 +19,3 @@ export default {
   },
 }
 </script>
-
-<style>
-body {
-  position: relative;
-  /* always show scrollbar */
-  overflow-y: scroll;
-}
-
-body::after {
-  content: '';
-  display: block;
-  @apply h-40;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-</style>

@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>HELLO</h1>
-    <p>This is the blog page</p>
+    <p>All blog posts</p>
+    <div v-text="posts"></div>
   </div>
 </template>
 
@@ -10,6 +11,14 @@ export default {
   name: 'Blog',
 
   layout: 'default',
+
+  async asyncData({ $content }) {
+    const posts = await $content().fetch()
+
+    return {
+      posts,
+    }
+  },
 
   head: {
     title: 'Marantesss 👋 - Blog',
