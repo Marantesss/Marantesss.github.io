@@ -15,7 +15,7 @@
       @click="toggleMenu"
     />
     <div class="menu" :class="{ 'opened-menu': isMenuOpen }">
-      <ul class="text-center m-auto p-2">
+      <ul class="flex flex-col place-items-center m-auto">
         <li
           v-for="route in routes"
           :key="route.name"
