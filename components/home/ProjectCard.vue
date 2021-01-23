@@ -7,7 +7,7 @@
       :class="imagePosition === 'right' ? 'order-last' : 'order-first'"
     >
       <img
-        :src="require(`~/assets/img/projects/${imageName}.jpg`)"
+        :src="require(`~/assets/img/projects/${imageName}`)"
         alt="ChitChat Logo"
         class="w-full h-full object-cover"
       />
