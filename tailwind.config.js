@@ -16,10 +16,20 @@ module.exports = {
         84: '21rem',
         96: '24rem',
       },
+      width: {
+        72: '18rem',
+        84: '21rem',
+        96: '24rem',
+      },
     },
   },
   variants: {},
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    // typography for blog posts
+    require('@tailwindcss/typography'),
+    // line clamping classes
+    require('@tailwindcss/line-clamp'),
+  ],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     content: [

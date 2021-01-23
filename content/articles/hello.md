@@ -1,11 +1,12 @@
 ---
 title: Getting started
-description: 'This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wroteThis is a description of the post I just wrote'
+description: 'This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wrote, This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote. This is a description of the post I just wrote'
 tags:
   - 'Family'
   - 'Life'
 image: 'hello.jpg'
-time: 15
+time: '15 minutes'
+author: 'Someone Else'
 ---
 
 Empower your NuxtJS application with `@nuxtjs/content` module: write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.

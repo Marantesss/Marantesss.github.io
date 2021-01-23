@@ -1,11 +1,12 @@
 <template>
   <div class="container mx-auto">
-    <section class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+    <section class="grid grid-cols-1 gap-4">
       <div v-for="post in posts" :key="post.title">
         <PostCard
           :image="post.image"
           :title="post.title"
           :description="post.description"
+          :author="post.author"
           :url="post.slug"
           :tags="post.tags"
           :time="post.time"
