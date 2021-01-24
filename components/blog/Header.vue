@@ -1,15 +1,30 @@
 <template>
-  <div class="bg-dark-blue header-min-height">
-    <div class="text-white text-4xl flex justify-center h-full">
-      WIP
-      <dynamic-image class="h-64" filename="workspace.svg"></dynamic-image>
+  <div class="bg-gray-200 header-min-height flex justify-center items-center">
+    <div class="grid grid-cols-2 items-center container">
+      <div class="col-span-2 md:col-span-1">
+        <h1 class="text-gray-800 font-title text-6xl">Welcome to my blog</h1>
+        <p class="text-gray-600">
+          Here I will write about pretty much anything mildly interesting or
+          miscellaneous goings-on in my life. There may or may not be some
+          invited writers. Stay tuned!
+        </p>
+      </div>
+      <div class="md:col-span-1 md:inline hidden justify-self-end">
+        <Laptop class="h-96 overflow-visible" is-animated />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Laptop from '~/components/blog/Laptop'
+
 export default {
   name: 'Header',
+
+  components: {
+    Laptop,
+  },
 
   data: () => ({
     navbarItems: [
@@ -23,66 +38,11 @@ export default {
       },
     ],
   }),
-
-  mounted() {
-    /*
-    const heroCard = this.$refs.heroCard
-    const heroPhoto = this.$refs.heroPhoto
-    const headerContainer = this.$refs.headerContainer
-
-    // create timeline
-    const timeline = this.$gsap.timeline()
-
-    timeline
-      // curve header
-      .fromTo(
-        headerContainer,
-        { clipPath: 'none' },
-        {
-          clipPath: 'circle(300vh at 50% -200vh)',
-          duration: 2,
-          ease: 'power2.inOut',
-        }
-      )
-      // slide from right to left
-      .fromTo(
-        heroCard,
-        { opacity: 0, x: '200%' },
-        { opacity: 1, x: '0%', duration: 1, ease: 'power2.out' },
-        '-=1'
-      )
-      // slide from left to right
-      .fromTo(
-        heroPhoto,
-        { opacity: 0, x: '-200%' },
-        { opacity: 1, x: '0%', duration: 1, ease: 'power2.out' },
-        '-=1'
-      )
-      */
-  },
 }
 </script>
 
 <style scoped>
-@media only screen and (max-height: 500px) {
-  .circle-clip {
-    clip-path: none !important;
-  }
-}
-
-.circle-clip {
-  clip-path: circle(300vh at 50% -200vh);
-}
-
 .header-min-height {
   min-height: 500px;
-}
-
-.hero-card {
-  width: 40rem;
-}
-
-.hero-title {
-  font-size: 6rem;
 }
 </style>

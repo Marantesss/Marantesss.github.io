@@ -18,10 +18,8 @@
           class="h-full flex items-center justify-center md:justify-start w-full md:w-1/2"
         >
           <div ref="heroCard" class="hero-card md:p-0 p-8">
-            <h1 class="text-gray-700 text-left font-title hero-title">
-              Gonçalo
-            </h1>
-            <h1 class="text-gray-700 text-right font-title hero-title">
+            <h1 class="text-gray-700 text-left font-title text-8xl">Gonçalo</h1>
+            <h1 class="text-gray-700 text-right font-title text-8xl">
               Marantes
             </h1>
             <h2 class="text-3xl font-title text-gray-700 pb-4">
@@ -113,9 +111,5 @@ export default {
 
 .hero-card {
   width: 40rem;
-}
-
-.hero-title {
-  font-size: 6rem;
 }
 </style>
