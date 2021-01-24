@@ -16,6 +16,7 @@
     />
     <div class="menu" :class="{ 'opened-menu': isMenuOpen }">
       <ul class="flex flex-col place-items-center m-auto">
+        <!-- Main Routes -->
         <li
           v-for="route in routes"
           :key="route.name"
@@ -26,6 +27,15 @@
           <NuxtLink class="menu-link" :to="route.path">
             {{ route.name }}
           </NuxtLink>
+        </li>
+        <!-- CV -->
+        <li class="menu-item" @click="toggleMenu">
+          <a
+            class="menu-link"
+            target="_blank"
+            :href="cvRoute.path"
+            v-text="cvRoute.name"
+          ></a>
         </li>
       </ul>
     </div>
@@ -56,6 +66,10 @@ export default {
         path: '/blog',
       },
     ],
+    cvRoute: {
+      name: 'CV',
+      path: '/CV-GoncaloMarantes.pdf',
+    },
   }),
 
   computed: {

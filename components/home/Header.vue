@@ -44,19 +44,6 @@
 export default {
   name: 'Header',
 
-  data: () => ({
-    navbarItems: [
-      {
-        name: 'Home',
-        route: '/',
-      },
-      {
-        name: 'Blog',
-        route: '/blog',
-      },
-    ],
-  }),
-
   mounted() {
     const heroCard = this.$refs.heroCard
     const heroPhoto = this.$refs.heroPhoto
