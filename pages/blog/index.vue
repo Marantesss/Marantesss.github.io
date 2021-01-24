@@ -14,7 +14,7 @@
             :title="latestPost.title"
             :description="latestPost.description"
             :author="latestPost.author"
-            :date="latestPost.date"
+            :date="latestPost.createdAt"
             :url="latestPost.slug"
             :tags="latestPost.tags"
             :time="latestPost.time"

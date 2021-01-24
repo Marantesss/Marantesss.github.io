@@ -1,11 +1,15 @@
 <template>
-  <div class="mx-auto h-84 flex bg-white rounded-lg shadow-xl overflow-hidden">
+  <div
+    class="mx-auto lg:h-84 flex flex-col lg:flex-row bg-white rounded-lg shadow-xl overflow-hidden"
+  >
+    <!-- Image -->
     <dynamic-image
-      class="w-84 h-full object-cover"
+      class="lg:w-84 lg:h-full w-full h-40 object-cover"
       :filename="image"
     ></dynamic-image>
+    <!-- content -->
     <div class="w-full p-4 flex flex-col justify-between overflow-auto">
-      <div class="h-32">
+      <div class="lg:h-32 h-full">
         <!-- Title -->
         <h4
           class="text-2xl text-gray-900 font-bold leading-tight line-clamp-2"
@@ -31,7 +35,7 @@
         </div>
         <!-- Description -->
         <p
-          class="pt-2 text-base text-gray-500 leading-normal line-clamp-6"
+          class="pt-2 text-base text-gray-500 leading-normal line-clamp-5"
           v-text="description"
         ></p>
       </div>
