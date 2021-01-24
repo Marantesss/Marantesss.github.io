@@ -23,7 +23,7 @@
           :class="$nuxt.$route.path === route.path ? 'underline' : ''"
           @click="toggleMenu"
         >
-          <NuxtLink :to="route.path">
+          <NuxtLink class="menu-link" :to="route.path">
             {{ route.name }}
           </NuxtLink>
         </li>
@@ -107,10 +107,10 @@ export default {
 }
 
 .menu-item {
-  @apply font-title text-4xl py-4;
+  @apply font-title text-6xl my-4;
 }
 
-.menu-item:hover {
+.menu-link:hover {
   @apply underline;
 }
 </style>
