@@ -24,7 +24,7 @@
         <h2 class="text-2xl text-gray-500">
           <span class="text-dark-blue">All</span> Articles
         </h2>
-        <template v-if="posts">
+        <template v-if="posts.lentgh === 0">
           <div v-for="post in posts" :key="post.title" class="py-4">
             <PostCard
               :image="post.image"
@@ -39,7 +39,7 @@
           </div>
         </template>
         <template v-else>
-          <div class="flex justify-center py-2">
+          <div class="flex justify-center py-6">
             <p class="text-gray-500">
               Hmmm... Nothing seems to be here. Looks like you'll have to wait a
               while for me be creative!
