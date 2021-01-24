@@ -5,7 +5,7 @@
     viewBox="0 0 500 472.76"
   >
     <defs>
-      <style>
+      <svg:style>
         .cls-1 {
           fill: #b1b4c4;
         }
@@ -74,7 +74,7 @@
         .cls-19 {
           fill: url(#Безымянный_градиент_22-2);
         }
-      </style>
+      </svg:style>
       <linearGradient
         id="Безымянный_градиент_15"
         x1="-215"
