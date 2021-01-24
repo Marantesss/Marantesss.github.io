@@ -6,7 +6,6 @@ tags:
   - 'Tutorial'
 image: 'articles/hello.jpg'
 time: '30 minutes'
-date: ' January 25, 2021'
 author: 'Gonçalo Marantes'
 ---
 

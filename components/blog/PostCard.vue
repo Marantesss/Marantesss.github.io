@@ -16,7 +16,7 @@
           class="py-2 grid grid-cols-3 items-center w-full text-sm text-gray-500"
         >
           <!-- Date -->
-          <div class="col-span-1">Posted {{ date }}</div>
+          <div class="col-span-1">Posted {{ formatDate(date) }}</div>
           <!-- Reading Time -->
           <div class="flex col-span-1 items-center justify-center">
             <clock-icon size="1x"></clock-icon>
@@ -35,9 +35,9 @@
           v-text="description"
         ></p>
       </div>
-      <div class="flex justify-between items-center p-2">
+      <div class="flex justify-between items-center py-2">
         <!-- Author -->
-        <div class="text-gray-600">
+        <div class="text-gray-500">
           By <span class="text-dark-blue" v-text="author"></span>
         </div>
         <NuxtLink :to="`/blog/${url}`">
@@ -75,8 +75,8 @@ export default {
       default: '',
     },
     time: {
-      type: Number,
-      default: 1,
+      type: String,
+      default: '1 minute',
     },
     tags: {
       type: Array,
@@ -97,6 +97,19 @@ export default {
     gradientClasses: {
       type: String,
       default: 'bg-gradient-to-r from-green-400 to-blue-500',
+    },
+  },
+
+  methods: {
+    formatDate(date) {
+      const dateObject = new Date(date)
+      const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }
+      return dateObject.toLocaleDateString('en-US', options)
     },
   },
 }

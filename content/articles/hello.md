@@ -7,7 +7,7 @@ tags:
 image: 'articles/hello/pexels-snapwire-349727.png'
 time: '15 minutes'
 author: 'Someone Else'
-date: ' January 25, 2021'
+# createdAt: 'January 25 2021' is automatic
 ---
 
 ## Lorem ipsum dolor
