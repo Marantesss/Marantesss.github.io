@@ -11,7 +11,7 @@
       <div class="h-full flex">
         <!-- photo -->
         <div ref="heroPhoto" class="md:w-1/2 md:flex hidden justify-center">
-          <img class="object-cover" src="~assets/img/test.png" />
+          <img class="object-cover" src="~assets/img/me-b&w.png" />
         </div>
         <!-- title -->
         <div
