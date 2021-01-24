@@ -7,6 +7,7 @@
           :title="post.title"
           :description="post.description"
           :author="post.author"
+          :date="post.date"
           :url="post.slug"
           :tags="post.tags"
           :time="post.time"

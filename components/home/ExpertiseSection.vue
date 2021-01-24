@@ -63,7 +63,7 @@ export default {
         imageName: 'database',
         title: 'Database Development',
         description:
-          'Have no fear, relational databases are also a confort area for me',
+          'Have no fear, relational databases are also a comfort area for me',
         color: '#DFF2F6',
       },
       {

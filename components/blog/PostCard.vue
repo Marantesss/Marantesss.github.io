@@ -1,10 +1,9 @@
 <template>
   <div class="mx-auto h-84 flex bg-white rounded-lg shadow-xl overflow-hidden">
-    <img
-      :src="require(`~/assets/img/articles/${image}`)"
-      alt="Post Image"
+    <dynamic-image
       class="w-84 h-full object-cover"
-    />
+      :filename="image"
+    ></dynamic-image>
     <div class="w-full p-4 flex flex-col justify-between overflow-auto">
       <div class="h-32">
         <!-- Title -->
@@ -14,10 +13,10 @@
         ></h4>
         <!-- Information -->
         <div
-          class="py-2 grid grid-cols-3 items-center w-full text-sm text-gray-600"
+          class="py-2 grid grid-cols-3 items-center w-full text-sm text-gray-500"
         >
           <!-- Date -->
-          <div class="col-span-1">cenas</div>
+          <div class="col-span-1">Posted {{ date }}</div>
           <!-- Reading Time -->
           <div class="flex col-span-1 items-center justify-center">
             <clock-icon size="1x"></clock-icon>
@@ -32,11 +31,12 @@
         </div>
         <!-- Description -->
         <p
-          class="pt-2 text-base text-gray-600 leading-normal line-clamp-6"
+          class="pt-2 text-base text-gray-500 leading-normal line-clamp-6"
           v-text="description"
         ></p>
       </div>
       <div class="flex justify-between items-center p-2">
+        <!-- Author -->
         <div class="text-gray-600">
           By <span class="text-dark-blue" v-text="author"></span>
         </div>
@@ -89,6 +89,10 @@ export default {
     author: {
       type: String,
       default: 'Gonçalo Marantes',
+    },
+    date: {
+      type: String,
+      default: 'sometime',
     },
     gradientClasses: {
       type: String,
