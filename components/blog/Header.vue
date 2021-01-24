@@ -20,7 +20,7 @@
 import Laptop from '~/components/blog/Laptop'
 
 export default {
-  name: 'Header',
+  name: 'BlogHeader',
 
   components: {
     Laptop,
