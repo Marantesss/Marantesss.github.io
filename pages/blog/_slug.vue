@@ -3,19 +3,19 @@
     <h1 v-text="page.title"></h1>
     <!-- Information -->
     <div>
-      <p class="text-center text-gray-600">
+      <p class="text-center text-gray-500">
         <!-- Author -->
         By <span class="text-dark-blue" v-text="page.author"></span>
         <!-- Date -->
         <span class="px-2">/</span>
-        {{ page.date }}
+        {{ formatDate(page.createdAt) }}
         <!-- Reading Time -->
         <span class="px-2">/</span>
         {{ page.time }}
       </p>
 
       <!-- Tags -->
-      <p class="text-center text-gray-600">
+      <p class="text-center text-gray-500">
         <span v-for="tag in page.tags" :key="tag" class="mr-2">
           #<span class="underline">{{ tag }}</span>
         </span>
@@ -42,6 +42,18 @@ export default {
     return {
       page,
     }
+  },
+
+  methods: {
+    formatDate(date) {
+      const dateObject = new Date(date)
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }
+      return dateObject.toLocaleDateString('en-US', options)
+    },
   },
 
   head() {

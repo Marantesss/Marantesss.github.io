@@ -716,7 +716,8 @@ export default {
         .fromTo(
           laptop,
           { opacity: 0, x: '200%' },
-          { opacity: 1, x: '0%', duration: 1, ease: 'power2.out' }
+          { opacity: 1, x: '0%', duration: 1, ease: 'power2.out' },
+          '0.6' // wait 0.6 seconds berfore starting animation
         )
         // phone slide from bottom
         .fromTo(
