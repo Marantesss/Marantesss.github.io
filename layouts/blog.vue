@@ -5,10 +5,7 @@
       <div
         class="px-4 py-10 container mx-auto sm:px-6 sm:py-12 lg:py-16 lg:px-8"
       >
-        <article>
-          <h1 class="sr-only">Nuxt + Tailwind CSS Typography</h1>
-          <Nuxt />
-        </article>
+        <Nuxt />
       </div>
     </div>
     <Footer />

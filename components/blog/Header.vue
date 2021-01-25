@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-gray-200 header-min-height flex justify-center items-center">
+  <div
+    class="bg-gray-200 header-min-height flex justify-center items-center px-2 md:px-0"
+  >
     <div class="grid grid-cols-2 items-center container">
       <div class="col-span-2 md:col-span-1">
         <h1 class="text-gray-800 font-title text-6xl">Welcome to my blog</h1>

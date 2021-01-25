@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div px-2 md:px-0>
     <Header />
     <!-- Content -->
-    <div class="container mx-auto">
+    <div class="container mx-auto px-2 md:px-0">
       <section class="my-4">
         <!-- Featured Post -->
         <h2 class="text-2xl text-gray-500">

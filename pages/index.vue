@@ -2,7 +2,7 @@
   <div>
     <Header />
     <!-- Content -->
-    <div class="container mx-auto">
+    <div class="container mx-auto px-2 md:px-0">
       <div class="mt-32 flex justify-center items-center">
         <ExpertiseSection />
       </div>
