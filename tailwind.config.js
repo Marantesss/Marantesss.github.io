@@ -1,8 +1,10 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ['Montserrat', 'Segoe UI', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      sans: ['Montserrat', ...defaultTheme.fontFamily.mono],
+      serif: ['Merriweather', ...defaultTheme.fontFamily.serif],
       title: ['Poiret One', 'Montserrat', 'sans-serif'],
     },
     extend: {

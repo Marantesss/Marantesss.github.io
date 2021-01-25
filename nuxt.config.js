@@ -5,7 +5,8 @@ const baseUrl =
 
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
+  // https://nuxtjs.org/blog/going-full-static#new-config-option-target
+  // ssr: false,
 
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -13,8 +14,23 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Marantesss 👋',
-    // favicon
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    // favicon and stylesheets from google
+    link: [
+      // favicon
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // Poiret One Font
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Poiret+One&display=swap',
+      },
+      // Montserrat
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700',
+      },
+    ],
     // meta tags
     meta: [
       { charset: 'utf-8' },
@@ -105,7 +121,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['assets/css/main'],
+  css: ['~assets/css/main'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
