@@ -1,5 +1,10 @@
 <template>
   <article class="prose mx-auto">
+    <SocialHead
+      :title="page.title"
+      :description="page.description"
+      :image="require(`~/assets/img/${page.image}`)"
+    />
     <h1 v-text="page.title"></h1>
     <!-- Information -->
     <div>
@@ -54,12 +59,6 @@ export default {
       }
       return dateObject.toLocaleDateString('en-US', options)
     },
-  },
-
-  head() {
-    return {
-      title: `Marantesss 👋 - ${this.page.title}`,
-    }
   },
 }
 </script>

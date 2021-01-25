@@ -1,5 +1,6 @@
 <template>
   <div>
+    <SocialHead title="Home" />
     <Header />
     <!-- Content -->
     <div class="container mx-auto px-2 md:px-0">
@@ -32,12 +33,6 @@ export default {
     ExpertiseSection,
     ExperienceSection,
     ProjectSection,
-  },
-
-  data: () => ({}),
-
-  head: {
-    title: 'Marantesss 👋 - Home',
   },
 }
 </script>

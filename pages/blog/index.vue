@@ -1,5 +1,6 @@
 <template>
-  <div px-2 md:px-0>
+  <div>
+    <SocialHead title="Blog" />
     <Header />
     <!-- Content -->
     <div class="container mx-auto px-2 md:px-0">
@@ -84,10 +85,6 @@ export default {
       latestPost,
       posts,
     }
-  },
-
-  head: {
-    title: 'Marantesss 👋 - Blog',
   },
 }
 </script>

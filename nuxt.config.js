@@ -1,3 +1,8 @@
+const baseUrl =
+  process.env.NODE_ENV !== 'production'
+    ? 'http://localhost:3000'
+    : process.env.NUXT_ENV_BASE_URL
+
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -7,7 +12,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Marantesss',
+    title: 'Marantesss 👋',
     // favicon
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     // meta tags
@@ -33,7 +38,7 @@ export default {
       {
         hid: 'twitter:url',
         name: 'twitter:url',
-        content: process.env.BASE_URL,
+        content: baseUrl,
       },
       {
         hid: 'twitter:title',
@@ -49,7 +54,12 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: `${process.env.BASE_URL}/social-card.png`,
+        content: `${baseUrl}/social-card.png`,
+      },
+      {
+        hid: 'twitter:image:alt',
+        name: 'twitter:image:alt',
+        content: 'Marantesss',
       },
 
       // Open Graph
@@ -75,12 +85,12 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${process.env.BASE_URL}/social-card.png`,
+        content: `${baseUrl}/social-card.png`,
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: `${process.env.BASE_URL}/social-card.png`,
+        content: `${baseUrl}/social-card.png`,
       },
       {
         hid: 'og:image:alt',
@@ -88,6 +98,10 @@ export default {
         content: 'Marantesss',
       },
     ],
+  },
+
+  env: {
+    baseUrl,
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
