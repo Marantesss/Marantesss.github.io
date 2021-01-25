@@ -33,6 +33,8 @@ export default {
     '@nuxtjs/tailwindcss',
     // gsap
     'nuxt-gsap-module',
+    // google analytics
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -51,9 +53,11 @@ export default {
     },
   },
 
+  // https://google-analytics.nuxtjs.org/
   googleAnalytics: {
     id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID,
     dev: process.env.NODE_ENV !== 'production',
+    debug: process.env.NODE_ENV === 'development',
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
