@@ -85,7 +85,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://nuxtjs.org',
+        content: baseUrl,
       },
       {
         hid: 'og:title',
