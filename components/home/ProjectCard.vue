@@ -9,7 +9,8 @@
       <img
         :src="require(`~/assets/img/projects/${imageName}`)"
         alt="ChitChat Logo"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover transform duration-500"
+        :class="{ 'scale-125': isMouseOver }"
       />
     </div>
     <div
@@ -23,11 +24,20 @@
         ></p>
       </div>
       <a v-if="url" target="_blank" :href="url">
-        <Button class="w-full" :color-class="gradientClasses"
+        <Button
+          class="w-full"
+          :color-class="gradientClasses"
+          @mouseenter.native="toggleMouseOver"
+          @mouseleave.native="toggleMouseOver"
           >View Project</Button
         >
       </a>
-      <Button v-else class="w-full" :color-class="gradientClasses"
+      <Button
+        v-else
+        class="w-full"
+        :color-class="gradientClasses"
+        @mouseenter.native="toggleMouseOver"
+        @mouseleave.native="toggleMouseOver"
         >View Project</Button
       >
     </div>
@@ -68,6 +78,16 @@ export default {
     gradientClasses: {
       type: String,
       default: 'bg-gradient-to-r from-green-400 to-blue-500',
+    },
+  },
+
+  data: () => ({
+    isMouseOver: false,
+  }),
+
+  methods: {
+    toggleMouseOver() {
+      this.isMouseOver = !this.isMouseOver
     },
   },
 }

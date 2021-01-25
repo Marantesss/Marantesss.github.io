@@ -3,10 +3,13 @@
     class="mx-auto lg:h-84 flex flex-col lg:flex-row bg-white rounded-lg shadow-xl overflow-hidden"
   >
     <!-- Image -->
-    <dynamic-image
-      class="lg:w-84 lg:h-full w-full h-40 object-cover"
-      :filename="image"
-    ></dynamic-image>
+    <div class="overflow-hidden lg:w-84 lg:h-full h-40">
+      <dynamic-image
+        class="h-full w-full object-cover transform duration-500"
+        :class="{ 'scale-125': isMouseOver }"
+        :filename="image"
+      ></dynamic-image>
+    </div>
     <!-- content -->
     <div class="w-full p-4 flex flex-col justify-between overflow-auto">
       <div class="lg:h-32 h-full">
@@ -45,7 +48,12 @@
           By <span class="text-dark-blue" v-text="author"></span>
         </div>
         <NuxtLink :to="`/blog/${url}`">
-          <Button is-text>Read Article</Button>
+          <Button
+            is-text
+            @mouseenter.native="toggleMouseOver"
+            @mouseleave.native="toggleMouseOver"
+            >Read Article</Button
+          >
         </NuxtLink>
       </div>
     </div>
@@ -104,7 +112,14 @@ export default {
     },
   },
 
+  data: () => ({
+    isMouseOver: false,
+  }),
+
   methods: {
+    toggleMouseOver() {
+      this.isMouseOver = !this.isMouseOver
+    },
     formatDate(date) {
       const dateObject = new Date(date)
       const options = {
