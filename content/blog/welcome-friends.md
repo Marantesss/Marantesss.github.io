@@ -4,7 +4,7 @@ description: "Hello there friend, and welcome to my humble website and blog. In 
 tags:
   - "Life"
 image: "articles/welcome-friends/me.JPG"
-time: "15 minutes"
+time: "5 minutes"
 author: "Gonçalo Marantes"
 ---
 
