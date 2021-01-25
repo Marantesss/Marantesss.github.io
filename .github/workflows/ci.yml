@@ -51,6 +51,7 @@ jobs:
         run: yarn run generate
         env:
           NUXT_ENV_GOOGLE_ANALYTICS_ID: ${{ secrets.NUXT_ENV_GOOGLE_ANALYTICS_ID }}
+          NUXT_ENV_BASE_URL: ${{ secrets.NUXT_ENV_BASE_URL }}
 
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
