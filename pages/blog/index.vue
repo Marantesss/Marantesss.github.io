@@ -67,14 +67,14 @@ export default {
 
   async asyncData({ $content }) {
     // get all posts except latest
-    const posts = await $content('articles')
+    const posts = await $content('blog')
       .sortBy('createdAt', 'desc')
       .without(['body', 'toc'])
       .skip(1)
       .fetch()
 
     // get latest post
-    const [latestPost] = await $content('articles')
+    const [latestPost] = await $content('blog')
       .sortBy('createdAt', 'desc')
       .without(['body', 'toc'])
       .limit(1)
