@@ -1,9 +1,9 @@
 <template>
   <div
-    class="w-full h-84 mx-auto grid grid-cols-12 bg-white rounded-lg shadow-xl overflow-hidden"
+    class="h-84 grid grid-cols-12 bg-white rounded-lg shadow-xl overflow-hidden"
   >
     <div
-      class="col-span-4 md:col-span-6"
+      class="col-span-4 md:col-span-6 h-full overflow-hidden"
       :class="imagePosition === 'right' ? 'order-last' : 'order-first'"
     >
       <img

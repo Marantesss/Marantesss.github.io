@@ -1,9 +1,13 @@
 <template>
   <section>
     <SectionTitle title="What I've been up to" />
-    <div class="grid gap-6 grid-cols-1 xl:grid-cols-2 mt-12">
+    <div class="grid gap-6 grid-cols-2 mt-12">
       <!-- 4 projects card -->
-      <div v-for="card in cards" :key="card.title" class="w-full h-full p-2">
+      <div
+        v-for="card in cards"
+        :key="card.title"
+        class="w-full h-full col-span-2 lg:col-span-1"
+      >
         <ProjectCard
           :image-name="card.imageName"
           :image-position="card.imagePosition"
