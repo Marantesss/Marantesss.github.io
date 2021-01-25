@@ -16,11 +16,6 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-env
-  env: {
-    googleAnalyticsID: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID,
-  },
-
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['assets/css/main'],
 
@@ -57,7 +52,7 @@ export default {
   },
 
   googleAnalytics: {
-    id: process.env.googleAnalyticsID,
+    id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID,
     dev: process.env.NODE_ENV !== 'production',
   },
 
