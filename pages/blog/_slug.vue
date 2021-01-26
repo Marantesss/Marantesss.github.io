@@ -9,12 +9,9 @@
     <!-- Information -->
     <div>
       <p class="text-center text-gray-500">
-        <!-- Author -->
         By <span class="text-dark-blue" v-text="page.author"></span>
-        <!-- Date -->
         <span class="px-2">/</span>
         {{ formatDate(page.createdAt) }}
-        <!-- Reading Time -->
         <span class="px-2">/</span>
         {{ page.time }}
       </p>
