@@ -1,7 +1,7 @@
 <template>
   <div
     ref="headerContainer"
-    class="relative h-screen grid grid-cols-5 circle-clip header-min-height overflow-hidden"
+    class="relative h-screen grid grid-cols-5 header-min-height overflow-hidden opacity-0"
   >
     <!-- background -->
     <div class="md:col-span-2 md:inline hidden h-full bg-dark-blue"></div>
@@ -56,7 +56,12 @@ export default {
       // curve header
       .fromTo(
         headerContainer,
-        { clipPath: 'none' },
+        // opacity 1 since headerContainer's initial state is
+        // opactiy 0, this is done because when the webiste is
+        // statically deployed, the html/css is loaded first
+        // which causes the user to get a glimpse of the heroContainer
+        // without the gsap/js animation starting
+        { opacity: 1, clipPath: 'none' },
         {
           clipPath: 'circle(300vh at 50% -200vh)',
           duration: 2,
