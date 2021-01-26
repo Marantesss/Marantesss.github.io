@@ -5,76 +5,6 @@
     viewBox="0 0 500 472.76"
   >
     <defs>
-      <svg:style>
-        .cls-1 {
-          fill: #b1b4c4;
-        }
-        .cls-2 {
-          fill: #e4e7f2;
-        }
-        .cls-3,
-        .cls-6 {
-          fill: #d6d8e5;
-        }
-        .cls-4 {
-          fill: #1e212d;
-        }
-        .cls-12,
-        .cls-14,
-        .cls-5 {
-          opacity: 0.5;
-        }
-        .cls-5 {
-          fill: url(#Безымянный_градиент_15);
-        }
-        .cls-6 {
-          opacity: 0.4;
-        }
-        .cls-7 {
-          fill: #2b303f;
-        }
-        .cls-8 {
-          fill: #c3c6d1;
-        }
-        .cls-9 {
-          fill: #616e84;
-        }
-        .cls-10 {
-          fill: #757b89;
-        }
-        .cls-11 {
-          fill: #20232d;
-        }
-        .cls-12 {
-          fill: url(#Безымянный_градиент_15-2);
-        }
-        .cls-13 {
-          fill: #fff;
-        }
-        .cls-13,
-        .cls-16 {
-          opacity: 0.1;
-        }
-        .cls-14 {
-          fill: url(#Безымянный_градиент_15-3);
-        }
-        .cls-15 {
-          fill: #696f7c;
-        }
-        .cls-17,
-        .cls-19 {
-          opacity: 0.3;
-        }
-        .cls-17 {
-          fill: url(#Безымянный_градиент_22);
-        }
-        .cls-18 {
-          fill: #1f232d;
-        }
-        .cls-19 {
-          fill: url(#Безымянный_градиент_22-2);
-        }
-      </svg:style>
       <linearGradient
         id="Безымянный_градиент_15"
         x1="-215"
@@ -745,4 +675,78 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+/**
+ * THESE CLASSES WERE TAKEN FROM THE ACTUAL SVG
+ * if inline them they don't take effect when reloading
+ * the page in 'static' mode
+ */
+.cls-1 {
+  fill: #b1b4c4;
+}
+.cls-2 {
+  fill: #e4e7f2;
+}
+.cls-3,
+.cls-6 {
+  fill: #d6d8e5;
+}
+.cls-4 {
+  fill: #1e212d;
+}
+.cls-12,
+.cls-14,
+.cls-5 {
+  opacity: 0.5;
+}
+.cls-5 {
+  fill: url(#Безымянный_градиент_15);
+}
+.cls-6 {
+  opacity: 0.4;
+}
+.cls-7 {
+  fill: #2b303f;
+}
+.cls-8 {
+  fill: #c3c6d1;
+}
+.cls-9 {
+  fill: #616e84;
+}
+.cls-10 {
+  fill: #757b89;
+}
+.cls-11 {
+  fill: #20232d;
+}
+.cls-12 {
+  fill: url(#Безымянный_градиент_15-2);
+}
+.cls-13 {
+  fill: #fff;
+}
+.cls-13,
+.cls-16 {
+  opacity: 0.1;
+}
+.cls-14 {
+  fill: url(#Безымянный_градиент_15-3);
+}
+.cls-15 {
+  fill: #696f7c;
+}
+.cls-17,
+.cls-19 {
+  opacity: 0.3;
+}
+.cls-17 {
+  fill: url(#Безымянный_градиент_22);
+}
+.cls-18 {
+  fill: #1f232d;
+}
+.cls-19 {
+  fill: url(#Безымянный_градиент_22-2);
+}
+</style>
