@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ['Montserrat', ...defaultTheme.fontFamily.mono],
+      sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       serif: ['Merriweather', ...defaultTheme.fontFamily.serif],
       title: ['Poiret One', 'Montserrat', 'sans-serif'],
     },
