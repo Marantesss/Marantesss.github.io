@@ -4,9 +4,9 @@ const baseUrl =
     : process.env.NUXT_ENV_BASE_URL
 
 export default {
-  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
+  // Enable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   // https://nuxtjs.org/blog/going-full-static#new-config-option-target
-  // ssr: false,
+  ssr: true,
 
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -124,7 +124,7 @@ export default {
   css: ['~assets/css/main'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['plugins/preview.client.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -147,6 +147,9 @@ export default {
     '@nuxt/content',
   ],
 
+  /*
+  // I don't need this anymore with static target
+  // still here for reference
   generate: {
     // https://content.nuxtjs.org/advanced/#static-site-generation
     async routes() {
@@ -156,6 +159,7 @@ export default {
       return files.map((file) => (file.path === '/index' ? '/' : file.path))
     },
   },
+  */
 
   // https://google-analytics.nuxtjs.org/
   googleAnalytics: {
