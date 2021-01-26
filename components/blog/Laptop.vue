@@ -1,8 +1,10 @@
 <template>
   <svg
+    ref="laptopRoot"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 500 472.76"
+    class="opacity-0"
   >
     <defs>
       <linearGradient
@@ -637,37 +639,45 @@ export default {
       const laptop = this.$refs.laptop
       const watch = this.$refs.watch
       const glasses = this.$refs.glasses
+      const laptopRoot = this.$refs.laptopRoot
 
       // create timeline
       const timeline = this.$gsap.timeline()
 
       timeline
+        // whole laptop should became visible over time
+        .fromTo(
+          laptopRoot,
+          { opacity: 0 },
+          { opacity: 1, duration: 1 },
+          '0.5' // wait 0.5 seconds before starting animation
+        )
         // laptop slide from right
         .fromTo(
           laptop,
-          { opacity: 0, x: '200%' },
-          { opacity: 1, x: '0%', duration: 1, ease: 'power2.out' },
-          '0.6' // wait 0.6 seconds berfore starting animation
+          { x: '100%' },
+          { x: '0%', duration: 1, ease: 'power2.out' },
+          '-=1'
         )
         // phone slide from bottom
         .fromTo(
           mobile,
-          { opacity: 0, y: '200%' },
-          { opacity: 1, y: '0%', duration: 1, ease: 'power2.out' },
+          { y: '200%' },
+          { y: '0%', duration: 1, ease: 'power2.out' },
           '-=1'
         )
         // watch slide from top
         .fromTo(
           watch,
-          { opacity: 0, y: '-200%' },
-          { opacity: 1, y: '0%', duration: 1, ease: 'power2.out' },
+          { y: '-200%' },
+          { y: '0%', duration: 1, ease: 'power2.out' },
           '-=1'
         )
         // glasses slide from left
         .fromTo(
           glasses,
-          { opacity: 0, x: '-200%' },
-          { opacity: 1, x: '0%', duration: 1, ease: 'power2.out' },
+          { x: '-200%' },
+          { x: '0%', duration: 1, ease: 'power2.out' },
           '-=1'
         )
     },
