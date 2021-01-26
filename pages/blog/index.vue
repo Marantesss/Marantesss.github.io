@@ -15,7 +15,7 @@
             :title="latestPost.title"
             :description="latestPost.description"
             :author="latestPost.author"
-            :date="latestPost.createdAt"
+            :date="latestPost.publishedAt"
             :url="latestPost.slug"
             :tags="latestPost.tags"
             :time="latestPost.time"
@@ -32,7 +32,7 @@
               :title="post.title"
               :description="post.description"
               :author="post.author"
-              :date="post.createdAt"
+              :date="post.publishedAt"
               :url="post.slug"
               :tags="post.tags"
               :time="post.time"
@@ -69,14 +69,14 @@ export default {
   async asyncData({ $content }) {
     // get all posts except latest
     const posts = await $content('blog')
-      .sortBy('createdAt', 'desc')
+      .sortBy('publishedAt', 'desc')
       .without(['body', 'toc'])
       .skip(1)
       .fetch()
 
     // get latest post
     const [latestPost] = await $content('blog')
-      .sortBy('createdAt', 'desc')
+      .sortBy('publishedAt', 'desc')
       .without(['body', 'toc'])
       .limit(1)
       .fetch()

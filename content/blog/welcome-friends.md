@@ -6,6 +6,7 @@ tags:
 image: "articles/welcome-friends/me.JPG"
 time: "5 minutes"
 author: "Gonçalo Marantes"
+publishedAt: "2021-01-24"
 ---
 
 ## Who are you even?

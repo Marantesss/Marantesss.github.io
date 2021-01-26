@@ -11,7 +11,7 @@
       <p class="text-center text-gray-500">
         By <span class="text-dark-blue" v-text="page.author"></span>
         <span class="px-2">/</span>
-        {{ formatDate(page.createdAt) }}
+        {{ formatDate(page.publishedAt) }}
         <span class="px-2">/</span>
         {{ page.time }}
       </p>
@@ -50,6 +50,7 @@ export default {
     formatDate(date) {
       const dateObject = new Date(date)
       const options = {
+        weekday: 'long',
         year: 'numeric',
         month: 'long',
         day: 'numeric',
