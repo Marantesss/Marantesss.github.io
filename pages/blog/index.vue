@@ -25,7 +25,7 @@
         <h2 class="text-2xl text-gray-500">
           <span class="text-dark-blue">All</span> Articles
         </h2>
-        <template v-if="posts.lentgh === 0">
+        <template v-if="posts.length !== 0">
           <div v-for="post in posts" :key="post.title" class="py-4">
             <PostCard
               :image="post.image"
