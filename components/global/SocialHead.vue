@@ -27,6 +27,14 @@ export default {
   head() {
     return {
       title: `Marantesss 👋 - ${this.title}`,
+      link: [
+        // canonical
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: process.env.baseUrl.concat(this.$route.path),
+        },
+      ],
       meta: [
         {
           hid: 'description',

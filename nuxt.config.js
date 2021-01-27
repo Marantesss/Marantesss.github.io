@@ -27,6 +27,12 @@ export default {
         href:
           'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700',
       },
+      // canonical
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: baseUrl,
+      },
     ],
     // meta tags
     meta: [
