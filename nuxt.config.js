@@ -1,7 +1,4 @@
-const baseUrl =
-  process.env.NODE_ENV !== 'production'
-    ? 'http://localhost:3000'
-    : process.env.NUXT_ENV_BASE_URL
+const baseUrl = process.env.NUXT_ENV_BASE_URL || 'http://localhost:3000'
 
 export default {
   // Enable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
