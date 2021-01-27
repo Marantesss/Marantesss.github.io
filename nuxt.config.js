@@ -167,8 +167,11 @@ export default {
   // https://google-analytics.nuxtjs.org/
   googleAnalytics: {
     id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID,
-    dev: process.env.NODE_ENV !== 'production',
-    debug: process.env.NODE_ENV === 'development',
+    dev: process.env.NODE_ENV === 'development',
+    debug: {
+      enabled: false, // process.env.NODE_ENV === 'development',
+      sendHitTask: process.env.NODE_ENV === 'production',
+    },
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
