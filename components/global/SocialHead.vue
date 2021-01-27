@@ -24,6 +24,25 @@ export default {
     },
   },
 
+  computed: {
+    /**
+     * This computed property is used for always
+     * getting a route with a trailing slash. For some
+     * reason different environments get different
+     * routes (w. or w.o. trailing slash)
+     */
+    currentRoute: {
+      get() {
+        const currentRoute =
+          this.$route.path.charAt(this.$route.path.length - 1) === '/'
+            ? this.$route.path
+            : `${this.$route.path}/`
+
+        return process.env.baseUrl.concat(currentRoute)
+      },
+    },
+  },
+
   head() {
     return {
       title: `Marantesss 👋 - ${this.title}`,
@@ -32,7 +51,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: process.env.baseUrl.concat(this.$route.path),
+          href: this.currentRoute,
         },
       ],
       meta: [
