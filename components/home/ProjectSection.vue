@@ -47,7 +47,7 @@ export default {
   data: () => ({
     cards: [
       {
-        imageName: 'project-orwell.jpg',
+        imageName: 'projects/project-orwell.jpg',
         imagePosition: 'right',
         title: 'Project: Orwell',
         description:
@@ -56,7 +56,7 @@ export default {
         gradientClasses: 'bg-gradient-to-r from-blue-900 to-red-800',
       },
       {
-        imageName: 'calculadora-fiscal.jpg',
+        imageName: 'projects/calculadora-fiscal.jpg',
         imagePosition: 'left',
         title: 'Calculadora Fiscal',
         description: 'Nuxt, Bulma, Figma',
@@ -64,7 +64,7 @@ export default {
         gradientClasses: 'bg-gradient-to-r from-yellow-400 to-orange-500',
       },
       {
-        imageName: 'ieee-up-sb.jpg',
+        imageName: 'projects/ieee-up-sb.jpg',
         imagePosition: 'right',
         title: 'IEEE UP SB Website',
         description: 'Vue, Vuetify, Django, PostgreSQL',
@@ -72,7 +72,7 @@ export default {
         gradientClasses: 'bg-gradient-to-r from-green-400 to-blue-500',
       },
       {
-        imageName: 'scope-360-dashboard.jpg',
+        imageName: 'projects/scope-360-dashboard.jpg',
         imagePosition: 'left',
         title: 'Scope: 360 Dashboard',
         description: 'Vue, Vuetify, Node, Knex, PostgreSQL',

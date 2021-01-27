@@ -3,23 +3,22 @@
     class="h-84 grid grid-cols-12 bg-white rounded-lg shadow-xl overflow-hidden"
   >
     <div
-      class="col-span-4 md:col-span-6 h-full overflow-hidden"
-      :class="imagePosition === 'right' ? 'order-last' : 'order-first'"
+      class="col-span-12 md:col-span-6 h-full overflow-hidden"
+      :class="imagePosition === 'right' ? 'md:order-last' : 'md:order-first'"
     >
-      <img
-        :src="require(`~/assets/img/projects/${imageName}`)"
-        alt="ChitChat Logo"
-        class="w-full h-full object-cover transform duration-500"
+      <dynamic-image
+        class="h-full w-full object-cover transform duration-500"
         :class="{ 'scale-125': isMouseOver }"
-      />
+        :filename="imageName"
+      ></dynamic-image>
     </div>
     <div
-      class="col-span-8 md:col-span-6 ml-6 p-6 flex flex-col justify-between"
+      class="col-span-12 md:col-span-6 ml-6 p-6 flex flex-col h-full justify-between"
     >
-      <div>
+      <div class="break-words">
         <h4 class="text-4xl text-gray-900 leading-tight" v-text="title"></h4>
         <p
-          class="pt-2 text-base text-gray-600 leading-normal"
+          class="py-2 text-base text-gray-600 leading-normal"
           v-text="description"
         ></p>
       </div>
