@@ -18,11 +18,15 @@
           class="h-full flex items-center justify-center md:justify-start w-full md:w-1/2"
         >
           <div ref="heroCard" class="hero-card md:p-0 p-8">
-            <h1 class="text-gray-700 text-left font-title text-8xl">Gonçalo</h1>
-            <h1 class="text-gray-700 text-right font-title text-8xl">
+            <h1 class="text-gray-700 text-left font-title text-7xl md:text-8xl">
+              Gonçalo
+            </h1>
+            <h1
+              class="text-gray-700 text-right font-title text-7xl md:text-8xl"
+            >
               Marantes
             </h1>
-            <h2 class="text-3xl font-title text-gray-700 pb-4">
+            <h2 class="text-2xl md:text-3xl font-title text-gray-700 pb-4">
               I like anything software related. I also do pretty stuff like
               rainbows and unicorns.
             </h2>
