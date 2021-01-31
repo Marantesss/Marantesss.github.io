@@ -4,7 +4,7 @@
       class="rounded-full w-24 h-24 flex items-center justify-center"
       :style="{ backgroundColor: color }"
     >
-      <img :src="require(`~/assets/img/icons/${imageName}.png`)" />
+      <img :src="require(`~/assets/img/icons/${imageName}.png`)" :alt="title" />
     </div>
     <h3
       class="text-lg text-gray-900 leading-tight uppercase py-4"

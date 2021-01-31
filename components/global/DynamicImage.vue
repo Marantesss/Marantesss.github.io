@@ -1,9 +1,9 @@
 <template>
   <figure v-if="caption">
-    <img class="object-contain h-full w-full" :src="dynamicImage" />
+    <img class="object-contain h-full w-full" :src="dynamicImage" :alt="alt" />
     <figcaption v-text="caption"></figcaption>
   </figure>
-  <img v-else :src="dynamicImage" />
+  <img v-else :src="dynamicImage" :alt="alt" />
 </template>
 
 <script>
@@ -19,6 +19,11 @@ export default {
       type: String,
       required: false,
       default: undefined,
+    },
+    alt: {
+      type: String,
+      required: false,
+      default: 'Image',
     },
   },
 

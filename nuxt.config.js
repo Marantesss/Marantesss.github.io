@@ -10,7 +10,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Marantesss 👋',
+    title: 'Gonçalo Marantes 👋',
     // favicon and stylesheets from google
     link: [
       // favicon
@@ -62,7 +62,7 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'Marantesss',
+        content: 'Gonçalo Marantes 👋',
       },
       {
         hid: 'twitter:description',
@@ -78,12 +78,16 @@ export default {
       {
         hid: 'twitter:image:alt',
         name: 'twitter:image:alt',
-        content: 'Marantesss',
+        content: 'Gonçalo Marantes 👋',
       },
 
       // Open Graph
       // Test on: https://developers.facebook.com/tools/debug/
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Marantesss' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Gonçalo Marantes 👋',
+      },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
@@ -93,7 +97,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Marantesss',
+        content: 'Gonçalo Marantes 👋',
       },
       {
         hid: 'og:description',
@@ -114,7 +118,7 @@ export default {
       {
         hid: 'og:image:alt',
         property: 'og:image:alt',
-        content: 'Marantesss',
+        content: 'Gonçalo Marantes 👋',
       },
     ],
   },

@@ -45,7 +45,7 @@ export default {
 
   head() {
     return {
-      title: `Marantesss 👋 - ${this.title}`,
+      title: `${this.title} | Gonçalo Marantes 👋`,
       link: [
         // canonical
         {

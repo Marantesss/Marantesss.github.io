@@ -4,7 +4,7 @@
       <img
         class="h-12 w-12"
         :src="require(`~/assets/img/icons/${imageName}.png`)"
-        alt="ChitChat Logo"
+        :alt="title"
       />
     </div>
     <div class="ml-6 pt-1">
