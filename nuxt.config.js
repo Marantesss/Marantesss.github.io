@@ -179,7 +179,14 @@ export default {
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        // https://github.com/PrismJS/prism-themes
+        theme: 'prism-themes/themes/prism-material-dark.css',
+      },
+    },
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
