@@ -64,7 +64,7 @@ console.log(greaterThan3.includes(2)) // false
 
 ```jsx
 // does not work (causes duplicates)
-const union = [...leftFruit, ...rightFruit]s
+const union = [...leftFruit, ...rightFruit]
 ```
 
 This one is a bit tricky, because we don't want any duplicate elements in our resulting array. That's where the [Set Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) comes in. A value in a Set instance can only occur once, so it is unique.
