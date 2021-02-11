@@ -1,5 +1,5 @@
 <template>
-  <article class="prose mx-auto">
+  <article class="prose lg:prose-lg mx-auto">
     <SocialHead
       :title="page.title"
       :description="page.description"
@@ -60,3 +60,19 @@ export default {
   },
 }
 </script>
+
+<style>
+/*
+https://github.com/tailwindlabs/tailwindcss-typography/issues/18
+Tailwind typography >3.0 is supposed to be used for tailwind >2.0
+Since I'm using tailwind 1 and tailwind typography 4.0 I can't override
+syles in tailwind.config.js
+*/
+.prose code::before {
+  content: '';
+}
+
+.prose code::after {
+  content: '';
+}
+</style>
