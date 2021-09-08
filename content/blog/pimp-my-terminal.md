@@ -38,7 +38,7 @@ and pick the profiles you want to install. I'm going with **DeHydration**.
 
 <dynamic-image filename="articles/pimp-my-terminal/font-color-state.png" caption="Solus OS default terminal"></dynamic-image>
 
-# [Zsh](https://www.zsh.org/) and [Oh My Zsh](https://ohmyz.sh/)
+## [Zsh](https://www.zsh.org/) and [Oh My Zsh](https://ohmyz.sh/)
 
 Out of the box, your Linux distro is probably using `Bash`, plain boring bash... I prefer to use `Zsh` due to easier configuration, community developed plugins and much much more.
 
