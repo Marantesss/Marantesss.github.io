@@ -31,13 +31,13 @@ const rightFruit = ['🍌', '🍒', '🍐', '🍍', '🍓']
 
 Now, we can visualize this a bit better if we use a [Venn diagram](https://en.wikipedia.org/wiki/Venn_diagram).
 
-<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/original.png" caption="Venn diagrams are awesome"></dynamic-image>
+<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/original.png" caption="Venn diagrams are awesome" no-shadow></dynamic-image>
 
 We can already start to see some neat stuff we might want to do with these elements.
 
 ### Intersection
 
-<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/intersection.png" caption="Intersection"></dynamic-image>
+<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/intersection.png" caption="Intersection" no-shadow></dynamic-image>
 
 ```jsx
 const intersection = leftFruit.filter(x => rightFruit.includes(x))
@@ -60,7 +60,7 @@ console.log(greaterThan3.includes(2)) // false
 
 ### Union
 
-<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/union.png" caption="Union"></dynamic-image>
+<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/union.png" caption="Union" no-shadow></dynamic-image>
 
 ```jsx
 // does not work (causes duplicates)
@@ -78,7 +78,7 @@ const union = [...new Set([...leftFruit, ...rightFruit])]
 
 ### Difference
 
-<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/difference.png" caption="Difference"></dynamic-image>
+<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/difference.png" caption="Difference" no-shadow></dynamic-image>
 
 ```jsx
 const difference = leftFruit.filter(x => !rightFruit.includes(x))
@@ -86,7 +86,7 @@ const difference = leftFruit.filter(x => !rightFruit.includes(x))
 
 ### Symmetric Difference
 
-<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/symmetric.png" caption="Symmetric Difference"></dynamic-image>
+<dynamic-image filename="articles/logical-array-operations-with-javascript-es6/symmetric.png" caption="Symmetric Difference" no-shadow></dynamic-image>
 
 ```jsx
 const leftDifference = leftFruit.filter(x => !rightFruit.includes(x))

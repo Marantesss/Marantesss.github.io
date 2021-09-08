@@ -1,13 +1,14 @@
 <template>
   <figure v-if="caption">
     <img
-      class="object-contain h-full w-full shadow-2xl"
+      class="object-contain h-full w-full"
+      :class="shadowClass"
       :src="dynamicImage"
       :alt="alt"
     />
     <figcaption v-text="caption"></figcaption>
   </figure>
-  <img v-else class="shadow-2xl" :src="dynamicImage" :alt="alt" />
+  <img v-else :class="shadowClass" :src="dynamicImage" :alt="alt" />
 </template>
 
 <script>
@@ -29,11 +30,19 @@ export default {
       required: false,
       default: 'Image',
     },
+    noShadow: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
   },
 
   computed: {
     dynamicImage() {
       return require(`~/assets/img/${this.filename}`)
+    },
+    shadowClass() {
+      return this.noShadow ? '' : 'shadow-xl'
     },
   },
 }
