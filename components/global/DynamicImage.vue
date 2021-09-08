@@ -1,9 +1,13 @@
 <template>
   <figure v-if="caption">
-    <img class="object-contain h-full w-full" :src="dynamicImage" :alt="alt" />
+    <img
+      class="object-contain h-full w-full shadow-2xl"
+      :src="dynamicImage"
+      :alt="alt"
+    />
     <figcaption v-text="caption"></figcaption>
   </figure>
-  <img v-else :src="dynamicImage" :alt="alt" />
+  <img v-else class="shadow-2xl" :src="dynamicImage" :alt="alt" />
 </template>
 
 <script>

@@ -6,11 +6,11 @@
       class="col-span-12 md:col-span-6 h-full overflow-hidden"
       :class="imagePosition === 'right' ? 'md:order-last' : 'md:order-first'"
     >
-      <dynamic-image
+      <img
         class="h-full w-full object-cover transform duration-500"
         :class="{ 'scale-125': isMouseOver }"
-        :filename="imageName"
-      ></dynamic-image>
+        :src="require(`~/assets/img/${imageName}`)"
+      />
     </div>
     <div
       class="col-span-12 md:col-span-6 ml-6 p-6 flex flex-col h-full justify-between"

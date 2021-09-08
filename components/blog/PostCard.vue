@@ -4,11 +4,11 @@
   >
     <!-- Image -->
     <div class="overflow-hidden lg:w-84 lg:h-full h-40">
-      <dynamic-image
+      <img
         class="h-full w-full object-cover transform duration-500"
         :class="{ 'scale-125': isMouseOver }"
-        :filename="image"
-      ></dynamic-image>
+        :src="require(`~/assets/img/${image}`)"
+      />
     </div>
     <!-- content -->
     <div class="w-full p-4 flex flex-col justify-between overflow-auto">
