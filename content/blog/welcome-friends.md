@@ -21,7 +21,7 @@ Right now I've spent the last month studying for exams and finishing this projec
 
 During the pandemic I've become more of an outside person, it made me appreciate the outdoors ⛰️. So I take any opportunity to leave my house and explore 🗺️, at least I have a chance to take some awesome pictures 📷.
 
-<dynamic-image class="h-96 mx-auto" filename="articles/welcome-friends/trekking.jpeg" caption="Trekking with the boys in the middle of Valongo."></dynamic-image>
+<dynamic-image class="h-96 mx-auto" filename="articles/welcome-friends/trekking.jpeg" caption="Trekking with the boys in the middle of Valongo." no-shadow></dynamic-image>
 
 ## What to expect from this blog?
 
