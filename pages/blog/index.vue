@@ -22,9 +22,30 @@
           />
         </div>
         <!-- All Posts -->
-        <h2 class="text-2xl text-gray-500">
-          <span class="text-dark-blue">All</span> Articles
-        </h2>
+        <div class="text-gray-500 flex flex-wrap justify-between">
+          <h2 class="text-2xl">
+            <span class="text-dark-blue">All</span> Articles
+          </h2>
+          <div class="flex items-center justify-center">
+            <Button
+              is-text
+              :disabled="currentPage === 1"
+              @click.native="downCurrentPage"
+            >
+              <ChevronLeftIcon size="1.0x" />
+            </Button>
+            <span class="text-dark-blue" v-text="currentPage" />
+            /
+            <span v-text="totalPages" />
+            <Button
+              is-text
+              :disabled="currentPage === totalPages"
+              @click.native="upCurrentPage"
+            >
+              <ChevronRightIcon size="1.0x" />
+            </Button>
+          </div>
+        </div>
         <template v-if="posts.length !== 0">
           <div v-for="post in posts" :key="post.title" class="py-4">
             <PostCard
@@ -53,8 +74,10 @@
 </template>
 
 <script>
+import { ChevronLeftIcon, ChevronRightIcon } from 'vue-feather-icons'
 import PostCard from '~/components/blog/PostCard'
 import Header from '~/components/blog/Header'
+import Button from '~/components/common/Button'
 
 export default {
   name: 'Blog',
@@ -62,16 +85,26 @@ export default {
   components: {
     PostCard,
     Header,
+    Button,
+    ChevronLeftIcon,
+    ChevronRightIcon,
   },
 
-  layout: 'default',
+  Layout: 'default',
 
   async asyncData({ $content }) {
+    const currentPage = 1
+    const perPage = 4
+    const totalPages = Math.ceil(
+      ((await $content('blog').fetch()).length - 1) / perPage
+    )
+
     // get all posts except latest
     const posts = await $content('blog')
       .sortBy('publishedAt', 'desc')
       .without(['body', 'toc'])
-      .skip(1)
+      .limit(perPage)
+      .skip(1 + perPage * (currentPage - 1))
       .fetch()
 
     // get latest post
@@ -82,9 +115,36 @@ export default {
       .fetch()
 
     return {
+      currentPage,
+      perPage,
+      totalPages,
       latestPost,
       posts,
     }
+  },
+
+  watch: {
+    async currentPage() {
+      this.posts = await this.$content('blog')
+        .sortBy('publishedAt', 'desc')
+        .without(['body', 'toc'])
+        .limit(this.perPage)
+        .skip(1 + this.perPage * (this.currentPage - 1))
+        .fetch()
+    },
+  },
+
+  methods: {
+    upCurrentPage() {
+      if (this.currentPage < this.totalPages) {
+        this.currentPage++
+      }
+    },
+    downCurrentPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--
+      }
+    },
   },
 }
 </script>
