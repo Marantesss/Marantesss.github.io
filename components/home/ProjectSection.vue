@@ -51,7 +51,7 @@ export default {
         imagePosition: 'right',
         title: 'Project: Orwell',
         description:
-          'React, Bulma, Figma, Affinity Design, Node, Express, Knex, PostgreSQL',
+          'React, Bulma, Node, Express, Knex, PostgreSQL, Redis, Traefik',
         url: 'https://project-orwell.pt/',
         gradientClasses: 'bg-gradient-to-r from-blue-900 to-red-800',
       },
