@@ -1,12 +1,17 @@
 <template>
-  <section>
+  <section class="w-full">
     <SectionTitle title="Where I've Been" />
-    <div class="flex flex-wrap mt-12 justify-center">
-      <div v-for="card in cards" :key="card.title" class="p-2">
+    <div class="grid gap-6 grid-cols-4 mt-12">
+      <div
+        v-for="card in cards"
+        :key="card.title"
+        class="p-2 w-full col-span-4 md:col-span-2 lg:col-span-1"
+      >
         <ExperienceCard
           :image-name="card.imageName"
           :title="card.title"
           :description="card.description"
+          :period="card.period"
         />
       </div>
     </div>
@@ -30,12 +35,26 @@ export default {
       {
         imageName: 'graduation',
         title: 'FEUP',
-        description: 'MIEIC',
+        description: 'Student',
+        period: '2017 - Present',
       },
       {
         imageName: 'microchip',
         title: 'SPeCS',
         description: 'Intern',
+        period: '2020',
+      },
+      {
+        imageName: 'football-ball',
+        title: 'ZeroZero',
+        description: 'Software Developer',
+        period: '2021',
+      },
+      {
+        imageName: 'idea',
+        title: 'INESC-TEC',
+        description: 'Intern',
+        period: '2021 - Present',
       },
     ],
   }),
