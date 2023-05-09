@@ -56,12 +56,15 @@ export default {
         gradientClasses: 'bg-gradient-to-r from-blue-900 to-red-800',
       },
       {
-        imageName: 'projects/calculadora-fiscal.jpg',
+        imageName:
+          'articles/the-making-of-decorators-to-options-api/vs-code-task.gif',
         imagePosition: 'left',
-        title: 'Calculadora Fiscal',
-        description: 'Nuxt, Bulma, Figma',
-        url: 'https://calculadora-fiscal.pt',
-        gradientClasses: 'bg-gradient-to-r from-yellow-400 to-orange-500',
+        title: 'Decorators to Object API Transpiler',
+        description: 'TypeScript, ts-morph, Compilers',
+        url:
+          'https://github.com/Marantesss/decorators-to-object-api-transpiler',
+        gradientClasses:
+          'bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900',
       },
       {
         imageName: 'projects/ieee-up-sb.jpg',

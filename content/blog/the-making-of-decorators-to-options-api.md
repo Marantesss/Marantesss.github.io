@@ -15,6 +15,11 @@ time: "20 mins"
 
 ## A brief introduction to the project
 
+<dynamic-image
+    filename="articles/the-making-of-decorators-to-options-api/infraspeak-logo.png"
+    caption=" This project was made possible by the wonderful people at Infraspeak"
+    no-shadow ></dynamic-image>
+
 By the end of 2023 [Vue 2 will reach its End of Life](https://v2.vuejs.org/lts/). For that reason, infraspeak's web application project must migrate from Vue 2 to Vue 3. However, the most important obstacle is that Vue 3 doesn’t support [Class style components](https://class-component.vuejs.org/), which is the syntax we've been using. For this reason, the first step for the Vue version upgrade should be to remove [Class style components](https://class-component.vuejs.org/) and the [`vue-property-decorators`](https://github.com/kaorun343/vue-property-decorator) library and use the [Options API](https://vuejs.org/api/options-state.html#options-state) for all components.
 
 In order to aid in this migration, the [Decorators to Options API Transpiler](https://github.com/Marantesss/decorators-to-object-api-transpiler) project started its development back in January 30, with the goal of **batch migrating vue single file components** ([SFC](https://vuejs.org/guide/scaling-up/sfc.html)) to a Vue 3 compatible syntax, i.e the [Options API](https://vuejs.org/api/options-state.html#options-state) syntax. And as a result, deprecating the use of these libraries.
