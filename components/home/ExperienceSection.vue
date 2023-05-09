@@ -36,7 +36,7 @@ export default {
         imageName: 'graduation',
         title: 'FEUP',
         description: 'Student',
-        period: '2017 - Present',
+        period: '2017 - 2022',
       },
       {
         imageName: 'microchip',
@@ -54,7 +54,13 @@ export default {
         imageName: 'idea',
         title: 'INESC-TEC',
         description: 'Intern',
-        period: '2021 - Present',
+        period: '2021 - 2022',
+      },
+      {
+        imageName: 'cogwheel',
+        title: 'Infraspeak',
+        description: 'Software Developer',
+        period: '2022 - Present',
       },
     ],
   }),
